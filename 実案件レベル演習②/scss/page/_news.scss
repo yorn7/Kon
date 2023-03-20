@@ -1,0 +1,22 @@
+@use "../global" as *;
+
+.news {
+  padding-top: rem(42);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(105);
+    padding-bottom: rem(100);
+  }
+}
+
+.accordion__container {
+  margin-top: rem(17);
+  @include mq(md) {
+    margin-top: rem(30);
+    max-width: rem(800);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+.owner {
+  background-image: url(../img/top/paper.jpg);
+  background-size: cover;
+  padding-top: rem(41);
+  @include mq(md) {
+    padding-top: rem(101);
+    padding-bottom: rem(129);
+  }
+}
+
+.owner-inner {
+  margin-top: rem(21);
+  display: flex;
+  flex-direction: column;
+  max-width: rem(600);
+  @include mq(md) {
+    flex-direction: row-reverse;
+    margin-top: rem(44);
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+
+.owner__img {
+  padding-left: rem(87);
+  padding-right: rem(86);
+  @include mq(md) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: rem(20);
+    width: 34.26%;
+  }
+}
+
+.owner__img img {
+  aspect-ratio: 172 / 209;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 370 / 450;
+    height: 100%;
+  }
+}
+
+.owner__content-inner {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(69);
+    width: 63.8%;
+  }
+}
+
+.owner__title {
+  font-size: rem(40);
+  line-height: calc(57 / 40);
+  display: inline-block;
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: calc(115 / 80);
+  }
+}
+
+.owner__content-wrapper {
+  margin-top: rem(-13.3);
+  @include mq(md) {
+    padding: rem(37) rem(74) rem(31) rem(74);
+    margin-top: rem(-26);
+  }
+}

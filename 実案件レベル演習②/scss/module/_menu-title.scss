@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.menu-title {
+  font-weight: $medium;
+  font-size: rem(48);
+  line-height: calc(69 / 48);
+  letter-spacing: rem(0.6);
+  @include mq(md) {
+    font-size: rem(100);
+    line-height: calc(144 / 100);
+  }
+}
+
+.menu-title span {
+  color: $accent-color;
+  text-transform: uppercase;
+}

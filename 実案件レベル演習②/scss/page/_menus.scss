@@ -1,0 +1,60 @@
+@use "../global" as *;
+
+.menus {
+  padding-top: rem(43);
+  @include mq(md) {
+    padding-top: rem(102);
+  }
+}
+
+.menus-inner {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(40);
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+
+.menus-slider {
+  margin-left: rem(-15);
+  margin-right: rem(-15);
+  @include mq(md) {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.menus-slider__item {
+  margin: 0 rem(3);  //スライダー間の余白
+  @include mq(md) {
+    width: calc(100% / 4 - #{rem(40)} * 3 / 4);
+  }
+}
+
+.menus-slider__item:nth-child(n+2) {
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.menus-slider__item img {
+  display: block;
+  aspect-ratio: 160 / 110;
+  @include mq(md) {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.slider-pic4 img {
+  @include mq(md) {
+    object-position: 0 50%;
+  }
+}
+
+.menus-btn {
+  @include mq(md) {
+    margin-top: rem(43);
+  }
+}

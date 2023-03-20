@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.course__imformation {
+  display: none;
+  @include mq(md) {
+    display: block;
+    text-align: right;
+    margin-top: rem(50);
+  }
+}
+
+.imformation-text {
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+  }
+}

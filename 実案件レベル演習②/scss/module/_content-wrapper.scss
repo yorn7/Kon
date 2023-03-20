@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.content-wrapper {
+  background-color: $base-color;
+  color: $sub-color;
+  margin-left: rem(-15);
+  margin-right: rem(-15);
+  padding: rem(20) rem(15);
+  @include mq(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.content-title {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
+.content-text {
+  font-size: rem(16);
+  line-height: calc(23 / 16);
+  @include mq(md) {
+    line-height: calc(36 / 16);
+  }
+}

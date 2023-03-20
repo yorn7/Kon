@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.hamburger {
+  background-color: $base-color;
+  opacity: 0.8;
+  padding: rem(12) rem(11) rem(12) rem(12);
+  border-radius: rem(50);
+  margin-top: rem(3);
+  margin-right: rem(9);
+}
+
+.hamburger span {
+  display: block;
+  width: rem(22);
+  height: rem(2);
+  background-color: #E2E2E2;
+  border-radius: rem(50);
+  transition: .3s;
+}
+
+.hamburger span:nth-child(2) {
+  margin: rem(7) 0;
+}
+
+
+//open時
+.hamburger.open {
+  background-color: #E2E2E2;
+}
+
+.hamburger.open span {
+  background-color: #000000;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translate(5px, 3px) rotate(45deg);
+  transform-origin: left;
+  width: rem(15);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translate(5px, -4px) rotate(-45deg);
+  transform-origin: left; 
+  width: rem(15); 
+}

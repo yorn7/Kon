@@ -1,0 +1,105 @@
+@use "../global" as *;
+
+.header-contact__inner {
+  @include mq(md) {
+    max-width: $inner;
+  }
+}
+
+.contact-header.transform {
+  background: $base-color;
+}
+.contact-mv {
+  height: rem(620);
+  @include mq(md) {
+    height: rem(700);
+  }
+}
+
+.contact-mv__bg {
+  background: url(../img/top/FV1.jpg);
+  background-size: cover;
+  background-position: 40% 0;
+  position: relative;
+  height: 100%;
+  @include mq(md) {
+    background: url(../img/top/FV_pc.jpg);
+    background-size: cover;
+  }
+}
+
+.contact-mv__bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.contact-mv__text {
+  font-size: rem(32);
+  line-height: calc(46 / 32);
+  color: #E2E2E2;
+  display: block;
+  position: absolute;
+  top: 21.2%;
+  left: 45%;
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: calc(57 / 40);
+    top: 50%;
+    left: 12.6%;
+  }
+}
+
+.contact__title {
+  padding-left: rem(15);
+  @include mq(md) {
+    margin-top: rem(40);
+    margin-left: rem(130);
+  }
+}
+
+.form__items {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(20);
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  padding-bottom: rem(40);
+  @include mq(md) {
+    margin-top: rem(40);
+    padding-bottom: rem(80);
+    max-width: $inner + strip-unit($padding-sp) * 2;
+  }
+}
+
+.form-item {
+  padding-right: rem(20);
+  padding-left: rem(20);
+  @include mq(md) {
+    padding-right: rem(195);
+    padding-left: rem(195);
+  }
+}
+
+.contact-text {
+  display: inline-block;
+  margin-top: rem(21);
+  padding-left: 14.5%;
+  @include mq(md) {
+    margin-top: rem(41);
+    padding-left: 65%;
+  }
+}
+
+.contact__text-item {
+  font-size: rem(12);
+  line-height: calc(17 / 12);
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+  }
+}

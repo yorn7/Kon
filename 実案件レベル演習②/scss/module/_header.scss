@@ -1,0 +1,61 @@
+@use "../global" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.header.transform {
+  background: $sub-color;
+  opacity: 0.8;
+  height: rem(80);
+  transition: all .3s;
+  @include mq(md) {
+    height: rem(150);
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(15);
+  height: inherit;
+  @include mq(md) {
+    padding-top: rem(40); 
+    margin: 0 auto;
+    max-width: $inner;
+  }
+}
+
+.header__logo {
+  height: inherit;
+  width: rem(105);
+  z-index: 11;
+  @include mq(md) {
+    width: rem(230);
+  }
+}
+
+.header__hamburger {
+  position: relative;
+  z-index: 11;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include mq(md) {
+    display: inline-block;
+    position: initial;
+  }
+}

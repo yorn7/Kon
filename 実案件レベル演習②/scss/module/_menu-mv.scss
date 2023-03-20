@@ -1,0 +1,42 @@
+@use "../global" as *;
+
+
+.menu-mv {
+  background-color: $base-color;
+  padding:  rem(120) 0 rem(80) rem(55);
+  @include mq(md) {
+    padding: rem(95) rem(143) rem(40) rem(284);
+  }
+}
+
+.menu-mv__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.menu-mv__text {
+  color: $accent-color;
+  font-size: rem(40);
+  line-height: calc(57 / 40);
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: rem(14);
+  @include mq(md) {
+    text-align: initial;
+    padding-right: 0;
+  }
+}
+
+.menu-mv__wrapper picture {
+  margin-top: rem(62);
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(207);
+  }
+}

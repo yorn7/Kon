@@ -1,0 +1,6 @@
+// フォルダごと一括読み込み
+@use "base";    // baseフォルダ
+@use "global";  // globalフォルダ
+@use "module";  // moduleフォルダ
+@use "page";    // pageフォルダ
+@use "utility"; // utilityフォルダ

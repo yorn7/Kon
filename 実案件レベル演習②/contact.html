@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!-- meta情報 -->
+  <title>タイトル</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- slick.css読み込み -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+  <!-- slick.js読み込み -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <meta name=“robots” content=“noindex”> -->
+</head>
+<body>
+<!-- header開始 -->
+<header class="header contact-header">
+  <div class="header__inner header-contact__inner">
+    <h1 class="header__logo">
+      <a href="index.html">
+          <img src="./img/common/konlogo_white.svg" alt="Konのロゴです。">
+      </a>
+    </h1>
+    <div class="header__content">
+      <button class="header__hamburger hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__nav header-nav js-drawer">
+        <ul class="header-nav__items">
+          <li class="header-nav__item header-white">
+            <a href="index.html">
+              TOP
+            </a>
+          </li>
+          <li class="header-nav__item header-white">
+            <a href="menu.html">
+              メニュー
+            </a>
+          </li>
+          <li class="header-nav__item header-white">
+            <a href="contact.html">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- header終了 -->
+<main>
+  <div class="mv top-mv contact-mv">
+    <div class="contact-mv__bg">
+      <h2 class="contact-mv__text">お問い合わせ</h2>
+    </div>
+  </div>
+  <div class="slider menu-slider">
+    <ul class="slider__items slider-items">
+      <li class="slider__item slider-item1">
+        <img src="./img/top/slider1.jpg" alt="ビーフサーロイングリルの写真です">
+      </li>
+      <li class="slider__item slider-item2">
+        <img src="./img/top/slider2.jpg" alt="ビストログリーンサラダの写真です">
+      </li>
+      <li class="slider__item slider-item3">
+        <img src="./img/top/slider3.jpg" alt="ラムチョップのグリルの写真です">
+      </li>
+      <li class="slider__item slider-item4">
+        <img src="./img/top/slider4.jpg" alt="オマール海老のビスクの写真です">
+      </li>
+      <li class="slider__item slider-item5">
+        <img src="./img/top/slider5.jpg" alt="鶏胸肉のローストの写真です">
+      </li>
+      <li class="slider__item slider-item6">
+        <img src="./img/top/slider6.jpg" alt="真鯛のポワレの写真です">
+      </li>
+      <li class="slider__item slider-item7">
+        <img src="./img/top/slider7.jpg" alt="鮭のムニエルの写真です">
+      </li>
+    </ul>
+  </div>
+  <div class="contact-form">
+      <h2 class="menu-title contact__title">
+        <span>c</span>ontact
+      </h2>
+      <form action="" class="form__items">
+        <div class="form__item form-item">
+          <label for="name">お名前<span>※</span></label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form__item form-item">
+          <label for="phone">お電話番号<span>※</span></label>
+          <input type="text" id="phone" name="name">
+        </div>
+        <div class="form__item form-item">
+          <label for="e-mail">メールアドレス</label>
+          <input type="text" id="e-mail" name="name">
+        </div>
+        <div class="form__item form-item">
+          <label for="name">お問い合わせ項目<span>※</span></label>
+          <div class="radio-container">
+            <div class="radio">
+              <input type="radio" id="radio-1" name="name" value="reservation">
+              <label for="radio-1" class="radio-label">ご予約</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="radio-2" name="name" value="other">
+              <label for="radio-2" class="radio-label radio-label__2">その他</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__item form-item form-contact">
+          <label for="name">お問い合わせ内容<span>※</span></label>
+          <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="contact__text contact-text">
+          <p class="contact__text-item">
+            ※前日のご予約の方はお電話でお願いします。<br>
+            ※ご予約希望の方は日にちと人数のご記入をお願いします。
+          </p>
+        </div>
+        <div class="contact-btn__wrapper more__btn form-item">
+          <button type="submit"><a href="" class="btn contact-btn">送信</a></button>
+        </div>
+      </form>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__inner inner">
+    <div class="footer__img">
+      <a href="index.html">
+        <img src="./img/common/konlogo_white.svg" alt="お店のロゴです。">
+      </a>
+    </div>
+    <div class="footer__content-wrapper">
+      <div class="footer__content">
+        <ul class="footer__items">
+          <li class="footer__item">
+            <h4 class="footer__category-title">店名</h4>
+            <p class="footer__text">
+              Kon
+            </p>
+          </li>
+          <li class="footer__item">
+            <h4 class="footer__category-title">住所</h4>
+            <p class="footer__text">
+              熊本県熊本市城下町1-1
+            </p>
+          </li>
+          <li class="footer__item">
+            <h4 class="footer__category-title">電話番号</h4>
+            <p class="footer__text">
+              096-111-1111
+            </p>
+          </li>
+          <li class="footer__item">
+            <h4 class="footer__category-title">アクセス</h4>
+            <p class="footer__text">
+              熊本駅より市電で城下町へ城下町降車後<br class="u-desktop">
+              徒歩3分
+            </p>
+          </li>
+          <li class="footer__item">
+            <h4 class="footer__category-title">営業時間</h4>
+            <p class="footer__text">
+              18:00〜23:00
+            </p>
+          </li>
+          <li class="footer__item">
+            <h4 class="footer__category-title">定休日</h4>
+            <p class="footer__text">
+              火曜日
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.562076237525!2d130.70159241466487!3d32.80386908992399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f4134164da3b%3A0x767e1774cea7e3ca!2z5qGc44Gu6aas5aC05Z-O5b2p6IuRIOahnOOBruWwj-i3rw!5e0!3m2!1sja!2sjp!4v1668261241252!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

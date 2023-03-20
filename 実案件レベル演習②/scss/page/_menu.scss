@@ -1,0 +1,86 @@
+@use "../global" as *;
+
+.header-menu__inner {
+  @include mq(md) {
+    max-width: $inner;
+  }
+}
+
+.menu-header.transform {
+  background: $base-color;
+}
+
+.header-white a {
+  color: #E2E2E2;
+}
+
+.header-white a::after {
+  content: '';
+  position: absolute;
+  height: rem(2);
+  left: rem(21);
+  width: 100%;
+  bottom: rem(-4);
+  background: #E2E2E2;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+  @include mq(md) {
+    left: rem(25);
+    width: calc(100% - #{rem(50)});
+  }
+}
+
+.header-white:last-child a::after {
+  @include mq(md) {
+    width:calc(100% - #{rem(25)}) ;
+  }
+}
+
+.header-white a:hover::after {
+  @include mq(md) {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+.plates__inner {
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.menu-inner:nth-child(n+2) {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.menu-list__wrapper {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(40);
+    margin-left: rem(130);
+  }
+}
+
+.menu-lists {
+  max-width: rem(244);
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 500px) {
+    max-width: rem(400);
+  }
+  @include mq(md) {
+    max-width: initial;
+  }
+}
+
+.softdrink__inner {
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-bottom: rem(100);
+  }
+}

@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+.header-nav {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-image: url(../img/top/hamburger_mv.jpg);
+  background-size: cover;
+  @include mq(md) {
+    width: initial;
+    height: inherit;
+    overflow-y: initial;
+    background-image: none;
+    background-size: initial;
+  }
+}
+
+.header-nav__items {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(434);
+  min-height: rem(650);
+  @include mq(md) {
+    flex-direction: row;
+    padding-top: 0;
+    min-height: initial;
+  }
+}
+
+.header-nav__item {
+  @include mq(md) {
+    height: inherit;
+  }
+}
+
+.header-nav__item a {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  color: #E2E2E2;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  @media (min-width: 500px) {
+    left: 70%;
+  }
+  @include mq(md) {
+    height: inherit;
+    padding: 0 rem(25);
+    color: initial;
+    position: relative;
+    left: 0;
+  }
+}
+
+.header-nav__item:nth-child(2) a {
+  top: rem(511);
+  @include mq(md) {
+    top: 0;
+  }
+}
+
+.header-nav__item:nth-child(3) a {
+  top: rem(588);
+  @include mq(md) {
+    top: 0;
+  }
+}
+
+.header-nav__item:last-child a {
+  @include mq(md) {
+    padding-right: 0;
+  }
+}
+
+
+//hover時アクション
+.header-nav__item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: rem(-4);
+  height: rem(2);
+  width: 100%;
+  background: #E2E2E2;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+  @include mq(md) {
+    left: rem(25);
+    bottom: rem(-4);
+    width: calc(100% - #{rem(50)});
+    background: $base-color;
+    opacity: 0.7;
+  }
+}
+
+.header-nav__item:last-child a::after {  //最後だけpadding-right消してるから25に変更
+  @include mq(md) {
+    width:calc(100% - #{rem(25)}) ;
+  }
+}
+
+.header-nav__item a:hover::after {
+  transform: scale(1, 1);
+}

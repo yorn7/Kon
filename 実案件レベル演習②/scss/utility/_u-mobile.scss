@@ -1,0 +1,8 @@
+@use "../global" as *;
+
+// SPのみ(767px以下)表示
+.u-mobile {
+  @include mq('md') {
+    display: none;
+  }
+}

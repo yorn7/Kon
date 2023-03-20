@@ -1,0 +1,80 @@
+@use "../global" as *;
+
+.top-recommend {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+
+.recommend {
+  background-image: url(../img/top/paper_brown.jpg);
+  background-size: cover;
+  padding-top: rem(41);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding: rem(100) 0;
+  }
+}
+
+.recommend-inner {
+  margin-top: rem(21);
+  @include mq(md) {
+    margin-top: rem(45);
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+
+.recommend__img {
+  display: block;
+  width: 86.9%;
+  max-width: rem(500);
+  @include mq(md) {
+    max-width: initial;
+    width: 40.7%;
+    z-index: 2;
+  }
+}
+
+.recommend__img img {
+  aspect-ratio: 300 / 218;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: 0;
+  @include mq(md) {
+    aspect-ratio: 440 / 320;
+  }
+}
+
+.recommend__content-wrapper {
+  margin-top: rem(20);
+  width: 90.7%;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  padding-right: rem(14);
+  padding-top: rem(21);
+  @include mq(md) {
+    margin-top: rem(-217);
+    width: 63.8%;
+    padding: rem(40) rem(74) rem(54) rem(76);
+  }
+}
+
+.recommend__content-title {
+  text-align: center;
+}
+
+.recommend-block {
+  display: inline-block;
+  text-align: left;
+}
+
+.recommend__content-text {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(34);
+  }
+}

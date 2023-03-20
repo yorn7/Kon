@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+.menu-lists {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.menu-lists__items:nth-child(n+2) {
+  margin-top: rem(20);
+  @media (min-width: 500px) {
+    margin-top: rem(40);
+  }
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.menu-lists__items:not(:nth-child(3n+1)) {
+  @include mq(md) {
+    margin-left: rem(99);
+  }
+}
+
+.menu-lists__items {
+  @include mq(md) {
+    width: calc(100% / 3 - #{rem(99)} * 2 / 3);
+  }
+}
+
+.menu-lists__items:nth-child(n+4) {
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}

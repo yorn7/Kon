@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// 数値のみを取り出す
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}
+
+// フォントサイズ ÷ 画面幅 * 100vw の計算
+@function vw($window_width, $size) {
+	@return math.div($size, $window_width) * 100vw;
+}
+
+// pxからremへの計算式
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}

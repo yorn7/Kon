@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.slider-items {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-items img {
+  width: 100%;
+  height: rem(131);
+  object-fit: cover;
+  @include mq(md) {
+    height: rem(239);
+  }
+}

@@ -1,0 +1,80 @@
+@use "../global" as *;
+
+//radio-btn
+.radio-container {
+  display: flex;
+  margin-left: rem(11);
+  margin-top: rem(11);
+  @include mq(md) {
+    margin-left: rem(80);
+    margin-top: 0;
+  }
+}
+
+.radio label {
+  display: block;
+  position: relative;
+  padding-left: rem(38);
+  @include mq(md) {
+    padding-left: rem(40);
+  }
+}
+
+.form__item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-label::before,
+.radio-label::after {
+  content: '';
+  border-radius: 100%;
+  border: rem(1) solid $accent-color;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-label::before {
+  width: rem(16);
+  height: rem(16);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @include mq(md) {
+    width: rem(20);
+    height: rem(20);
+  }
+}
+
+.radio-label::after {
+  background-color: $accent-color;
+  opacity: 0;
+  position: absolute;
+  width: rem(12);
+  height: rem(12);
+  left: rem(1.72);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  @include mq(md) {
+    width: rem(14);
+    height: rem(14);
+    left: rem(3);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+.radio-label__2 {
+  margin-left: rem(66);
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.form__item input[type="radio"]:checked +.radio-label::after {
+  opacity: 1;
+}

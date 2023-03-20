@@ -1,0 +1,86 @@
+@use "../global" as *;
+
+.top-dish {
+  padding-top: rem(43);
+  @include mq(md) {
+    padding-top: rem(100);
+  }
+}
+
+.dish-inner {
+  margin-top: rem(20);
+  display: flex;
+  flex-direction: column;
+  max-width: rem(600);
+  @include mq(md) {
+    margin-top: rem(45);
+    flex-direction: row-reverse;
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+
+.dish__img {
+  aspect-ratio: 345 / 251;
+  @include mq(md) {
+    aspect-ratio: 540 / 393;
+    width: 50%;
+  }
+}
+
+.dish__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish__content-inner {
+  margin-top: rem(27);
+  @include mq(md) {
+    margin-top: rem(8);
+    width: 50%;
+  }
+}
+
+.dish__title {
+  display: block;
+  padding: 0 rem(20);
+  @include mq(md) {
+    margin: 0 auto;
+    padding: 0 rem(134);
+  }
+}
+
+.dish__title-items {
+  writing-mode: vertical-rl;
+  margin-left: 50%;
+  font-size: rem(24);
+  line-height: 1;
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.dish__tittle-item {
+  letter-spacing: rem(11);
+}
+
+.dish__tittle-item:nth-child(n+2) {
+  margin-right: rem(40);
+  @include mq(md) {
+    margin-right: rem(100);
+  }
+}
+
+.dish__content-wrapper {
+  margin-top: rem(13);
+  padding-top: rem(16);
+  padding-bottom: rem(12);
+  @include mq(md) {
+    margin-top: rem(3);
+    padding: rem(15) rem(20);
+  }
+}
+
+.dish__content-text {
+  line-height: calc(36 / 16);
+}

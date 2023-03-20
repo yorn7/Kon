@@ -1,0 +1,27 @@
+@use "../global" as *;
+
+.more__btn {
+  text-align: center;
+  margin-top: rem(19);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.btn {
+  font-size: rem(14);
+  line-height: calc(20 / 14);
+  text-transform: uppercase;
+  color: $sub-color;
+  //左→右にグラデーション
+  background: linear-gradient(to right, $accent-color, #494330);
+  display: inline-block;
+  text-align: center;
+  padding: rem(10) rem(29) rem(10) rem(30);
+  border-radius: rem(20);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    padding: rem(9) rem(35) rem(9) rem(36);
+  }
+}

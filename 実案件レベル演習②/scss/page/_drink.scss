@@ -1,0 +1,22 @@
+@use "../global" as *;
+
+.list2 {
+  order: 2;
+  @include mq(md) {
+    order: 1;
+  }
+}
+
+.list3 {
+  order: 3;
+  @include mq(md) {
+    order: 2;
+  }
+}
+
+.list4 {
+  order: 1;
+  @include mq(md) {
+    order: 3;
+  }
+}

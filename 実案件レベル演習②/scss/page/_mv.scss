@@ -1,0 +1,6 @@
+@use "../global" as *;
+
+.mv.open {
+  background-image: url(../img/top/hamburger_mv.jpg);
+  transition: all .3s; 
+}
